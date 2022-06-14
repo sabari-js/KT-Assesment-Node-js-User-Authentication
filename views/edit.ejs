@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>EDIT</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Modify User Details</h2>
+        <form action="/update" method="POST">
+            <div class="form-group">
+                <label for="idname">ID</label>
+                <input type="text" class="form-control" id="id" placeholder="Enter the ID" value="<%= data[0].id %>" name="id" required>
+
+            </div>
+            <div class="form-group">
+                <label for="naname">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter the name" value="<%= data[0].name %>" name="name" required>
+                
+            </div>
+            <div class="form-group">
+                <label for="emaname">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter the email" value="<%= data[0].email %>" name="email" required>
+                
+            </div>
+            <button type="submit" class="btn btn-primary">submit</button>
+        </form>
+        
+    </div>
+    
+</body>
+</html>

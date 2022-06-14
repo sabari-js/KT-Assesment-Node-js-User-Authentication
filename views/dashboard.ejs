@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Hello</h2>
+        <p class="forget">do you want exit<a href="/user/login">Logout</a></p>
+        
+        <a href="/user/register" class="btn btn-sm btn-primary">Add User</a>
+        
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+              <% if(data.length){
+                for(var i =0; i < data.length; i++) { %>
+                <tr>
+                    <td><%= data[i].id %></td>
+                    <td><%= data[i].name %></td>
+                    <td><%= data[i].email %></td>
+                    <td>
+                        <a class="btn btn-sm btn-primary"  href="/user/edit/<%= data[i].id %>" >Edit</a>
+                        <a class="btn btn-sm btn-danger"  href="/user/delete/<%= data[i].id %>">Delete</a>
+                    </td>
+                </tr>
+              <% }
+              }else{ %>
+              <tr>
+                <td>no user</td>
+              </tr>
+            <% } %>
+
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>
