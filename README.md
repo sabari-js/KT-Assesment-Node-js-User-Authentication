@@ -15,6 +15,22 @@ Databse host: local host
 Database user: postgres
 Database password: 1234
 
-![](Screenshot/1.png)
+# HOME
+![](Screenshot/1.PNG)
+
+# Register
+![](Screenshot/2.PNG)
+
+# Login
+![](Screenshot/3.PNG)
+
+# Dashboard
+![](Screenshot/5.PNG)
+
+# Update
+![](Screenshot/6.PNG)
+
+# delete
+![](Screenshot/7.PNG)
 
 
