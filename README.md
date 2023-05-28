@@ -1,4 +1,4 @@
-# KT-Assesment-Node-js-User-Authentication
+# User-Authentication using NodeJS
 This project has user Authentication and CRUD function
 
 Frontend: HTML,CSS,Express
